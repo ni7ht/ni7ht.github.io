@@ -1,217 +1,123 @@
-# Chirpy
+# no style, please!
 
-Language: English | [简体中文](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/README.zh-CN.md)
+<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/logo.png" width="64" align="left" />A (nearly) no-CSS, fast, minimalist [Jekyll](https://jekyllrb.com/) theme.
+Inspired by [elly's site](http://tilde.town/~elly/), expressly created for [my personal blog](https://riggraz.dev/).
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
-[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
-[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+<h3 align="center"><a href="https://riggraz.dev/no-style-please/">Try the demo out!</a></h3>
 
-A minimal, sidebar, responsive web design Jekyll theme that focuses on text presentation. Designed to help you record and share your knowledge easily. [Live Demo »](https://chirpy.cotes.info)
-
-[![Devices Mockup](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/devices-mockup.png)](https://chirpy.cotes.info)
+<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/featured-image.png" />
 
 ## Features
 
-- Pinned Posts
-- Configurable theme mode
-- Double-level Categories
-- Last modified date for posts
-- Table of Contents
-- Automatically recommend related posts
-- Syntax highlighting
-- Mathematical expressions
-- Mermaid diagram & flowchart
-- Search
-- Atom Feeds
-- Disqus Comments
-- Google Analytics
-- GA Pageviews reporting (Advanced)
-- SEO and Performance Optimization
-
-## Prerequisites
-
-Follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
+* Fast (**1kb of CSS!** For more information on performance and more, see [Page Speed Insights report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/page-speed-insights-report.png) and [Lighthouse report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/lighthouse-report.png))
+* Light, dark and auto modes
+* Responsive
+* Content first (typography optimized for maximum readability)
+* SEO optimized (uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag))
+* RSS feed (uses [Jekyll Feed](https://github.com/jekyll/jekyll-feed))
+* Fully compatible with [GitHub Pages](https://pages.github.com/) (see [GitHub Pages installation](#github-pages-installation))
 
 ## Installation
 
-There are two ways to get the theme:
+If you haven't already created your blog using Jekyll, follow the [instructions](https://jekyllrb.com/docs/) to do so from Jekyll's documentation.
 
-- **Install from RubyGems** - Easy to update, isolate irrelevant project files so you can focus on writing.
-- **Fork on GitHub** - Convenient for custom development, but difficult to update, only suitable for web developers.
+NOTE: if you are using Jekyll with GitHub Pages, see the [GitHub Pages installation section](#github-pages-installation).
 
-### Installing the Theme Gem
-
-Add this line to your Jekyll site's `Gemfile`:
+Then, to style your blog with this theme, add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-chirpy"
+gem "no-style-please"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-theme-chirpy
+theme: no-style-please
 ```
 
 And then execute:
 
-```console
-$ bundle
-```
+    $ bundle
 
-Finally, copy the required files from the theme's gem (for detailed files, see [starter project][starter]) to your Jekyll site.
+Or install it yourself as:
 
-> **Hint**: To locate the installed theme’s gem, execute:
->
-> ```console
-> $ bundle info --path jekyll-theme-chirpy
-> ```
+    $ gem install no-style-please
 
-Or you can [**use the starter template**][use-starter] to create a Jekyll site to save time copying files from the theme's gem. We have prepared everything for you there!
+### GitHub Pages installation
 
-### Fork on GitHub
-
-[Fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork) on GitHub and then clone your fork to local. (Please note that the default branch code is in development.  If you want the blog to be stable, please switch to the [latest tag](https://github.com/cotes2020/jekyll-theme-chirpy/tags) and start writing.)
-
-Install gem dependencies by:
-
-```console
-$ bundle
-```
-
-And then execute:
-
-```console
-$ bash tools/init.sh
-```
-
-> **Note**: If you don't plan to deploy your site on GitHub Pages, append parameter option `--no-gh` at the end of the above command.
-
-What it does is:
-
-1. Remove some files or directories from your repository:
-    - `.travis.yml`
-    - files under `_posts`
-    - folder `docs`
-
-2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing the extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in the folder `.github`.
-
-3. Automatically create a commit to save the changes.
+If you want to use this theme for your Jekyll's site deployed on [GitHub Pages](https://pages.github.com/), follow the instructions on [this page](https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme).
 
 ## Usage
 
-### Configuration
+You can edit `_config.yml` file to customize your blog. You can change things such as the name of the blog, the author, the appearance of the theme (light, dark or auto), how dates are formatted, etc. Customizable fields should be straightforward to understand. Still, `_config.yml` contains some comments to help you understand what each field does.
 
-Update the variables of `_config.yml` as needed. Some of them are typical options:
+For further customization (e.g. layout, CSS) see the [official Jekyll's documentation](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) on customizing gem-based themes.
 
-- `url`
-- `avatar`
-- `timezone`
-- `lang`
+### Customize the menu
 
-### Running Local Server
+In order to add/edit/delete entries from the main menu, you have to edit the `menu.yml` file inside `_data` folder. Through that file you can define the structure of the menu. Take a look at the default configuration to get an idea of how it works and read on for a more comprehensive explanation.
 
-You may want to preview the site contents before publishing, so just run it by:
+The `menu.yml` file accepts the following fields:
 
-```console
-$ bundle exec jekyll s
+- `entries` define a new unordered list that will contain menu entries
+- each entry is marked by a `-` at the beginning of the line
+- each entry can have the following attributes:
+    - `title`, which defines the text to render for this menu entry (**NB: you can also specify HTML!**)
+    - `url`, which can be used to specify an URL for this entry. If not specified, `title` will be rendered as-is; otherwise `title` will be sorrounded by a link tag pointing to the specified URL. Note that the URL can either be relative or absolute. Also note that you can get the same result by placing an ```<a>``` tag in the `title` field.
+    - `post_list`, which can be set either to `true` or to an object. If it is true, the entry will have a list of all posts as subentries. This is used to render your post list. If you want to customize which posts to render (e.g. by category), you can add one or more of the following attributes under `post_list`:
+        - `category`, which can be set to a string. It is used to render a list of posts of the specified category only. If you don't set it, then posts of all categories will be rendered.
+        - `limit`, which can be set to a number. It specifies the number of posts to show. If not set, all posts will be rendered.
+        - `show_more`, which can be true. If it is true and if the number of posts to show is greater than the specified `limit`, render a link to another page. To specify the URL and the text of the link, you can set `show_more_url` and `show_more_text` attributes, which are documented below.
+        - `show_more_url`, which can be a string. It specifies the URL for the show more link. Use only if `show_more` is true. This will usually redirect to a page containing all posts, which you can easily create using an archive page (see [create archive pages](#create-archive-pages) section)
+        - `show_more_text`, which can be a string. It specifies the text for the show more link. Use only if `show_more` is true.
+    - `entries`, yes, you can have entries inside entries. In this way you can create nested sublists!
+
+### Create archive pages
+
+A so-called archive page is a page that shows a list of posts (see [this](https://riggraz.dev/no-style-please/all-posts) for an example). You can create an archive page by creating a page and putting the following frontmatter:
+
+```
+---
+layout: archive
+title: The title of the page here
+which_category: name-of-category
+---
 ```
 
-Or run the site on Docker with the following command:
+`which_category` is optional: if you don't put it, then all posts of the blog will be listed; on the other hand, if you specify a category, only posts of that category will be shown.
 
-```terminal
-$ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
-```
+This feature is particularly useful if used together with the `show_more` attribute in the menu. For example, if you want to limit the number of posts shown in the home page to 5 but add a link to view them all, then you can create an archive page using the method showed above and link to it using the `show_more_url` attribute in `menu.yml`. See [this example](https://github.com/riggraz/no-style-please/blob/master/_data/menu.yml) if you're in doubt.
 
-Open a browser and visit to _<http://localhost:4000>_.
+### Customize the index page
 
-### Deployment
+The `index.md` page should use layout `home`, which is the layout that displays the menu. If you want to have some content after the menu, you can just add that content in the `index.md` file, and it will automatically show under the menu.
 
-Before the deployment begins, checkout the file `_config.yml` and make sure the `url` is configured correctly. Furthermore, if you prefer the [**project site**](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) and don't use a custom domain, or you want to visit your website with a base URL on a web server other than **GitHub Pages**, remember to change the `baseurl` to your project name that starting with a slash, e.g, `/project-name`.
+Another thing you can do to customize the index page is show the description of your blog between the title and the menu. To do this, just edit `_config.yml` and change `theme_config.show_description` to `true`.
 
-Now you can choose ONE of the following methods to deploy your Jekyll site.
+### Pro tips
 
-#### Deploy on GitHub Pages
+#### Dark mode for images
 
-For security reasons, GitHub Pages build runs on `safe` mode, which restricts us from using plugins to generate additional page files. Therefore, we can use **GitHub Actions** to build the site, store the built site files on a new branch, and use that branch as the source of the GH Pages service.
+This theme provides dark mode by inverting all colors of light mode throught the CSS `invert()` function. This approach would also invert the color of all images, but, since this is not the behaviour one would expect, images are not inverted by default.
 
-Quickly check the files needed for GitHub Actions build:
+However, if you would like to force the color inversion on a specific image you can do so by applying `class="ioda"` to that image ("ioda" stands for "invert on dark appearance"). See the image in the [overview post](https://github.com/riggraz/no-style-please/blob/master/_posts/2020-07-07-overview-post.md) for an example of this approach. Note that color inversion will take place only when the theme has dark appearance!
 
-- Ensure your Jekyll site has the file `.github/workflows/pages-deploy.yml`. Otherwise, create a new one and fill in the contents of the [workflow file][workflow], and the value of the `on.push.branches` should be the same as your repo's default branch name.
-- Ensure your Jekyll site has file `tools/test.sh` and `tools/deploy.sh`. Otherwise, copy them from this repo to your Jekyll site.
-
-And then rename your repository to `<GH-USERNAME>.github.io` on GitHub.
-
-Now publish your Jekyll site by:
-
-1. Push any commit to remote to trigger the GitHub Actions workflow. Once the build is complete and successful, a new remote branch named `gh-pages` will appear to store the built site files.
-
-2. Browse to your repo's landing page on GitHub and select the branch `gh-pages` as the [publishing source](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) through _Settings_ → _Options_ → _GitHub Pages_:
-
-    ![gh-pages-sources](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190809/gh-pages-sources.png)
-
-3. Visit your website at the address indicated by GitHub.
-
-#### Deploy on Other Platforms
-
-On platforms other than GitHub, we cannot enjoy the convenience of **GitHub Actions**. Therefore, we should build the site locally (or on some other 3rd-party CI platform) and then put the site files on the server.
-
-Go to the root of the source project, build your site by:
-
-```console
-$ JEKYLL_ENV=production bundle exec jekyll b
-```
-
-Or build the site with Docker by:
-
-```terminal
-$ docker run -it --rm \
-    --env JEKYLL_ENV=production \
-    --volume="$PWD:/srv/jekyll" \
-    jekyll/jekyll \
-    jekyll build
-```
-
-Unless you specified the output path, the generated site files will be placed in folder `_site` of the project's root directory. Now you should upload those files to your web server.
-
-## Documentation
-
-For more details and a better reading experience, please check out the [tutorials on the demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+For example, if you have a black and white image it could make sense to invert it in dark mode. On the other hand, a colorful image will probably look bad if inverted.
 
 ## Contributing
 
-The old saying, "Two heads are better than one." Consequently, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/riggraz/no-style-please. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Credits
+## Development
 
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files). The avatar and favicon design comes from [Clipart Max](https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/).
+To set up your environment to develop this theme, run `bundle install`.
 
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas, or inspired me to write more readable documentation.
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-Last but not least, thank [JetBrains][jb] for providing the open source license.
-
-## Sponsoring
-
-If you like this theme or find it helpful, please consider sponsoring me, because it will encourage and help me better maintain the project, I will be very grateful!
-
-[![Buy Me a Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff813f?logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/coteschung)
-[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][cn-donation]
-[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][cn-donation]
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `no-style-please.gemspec` accordingly.
 
 ## License
 
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-[starter]: https://github.com/cotes2020/chirpy-starter
-[use-starter]: https://github.com/cotes2020/chirpy-starter/generate
-[workflow]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/.github/workflows/pages-deploy.yml.hook
-
-<!-- ReadMe links -->
-
-[jb]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
-[cn-donation]: https://cotes.gitee.io/alipay-wechat-donation/
